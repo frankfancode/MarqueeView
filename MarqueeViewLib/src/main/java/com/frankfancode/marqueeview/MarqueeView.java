@@ -126,8 +126,12 @@ public class MarqueeView extends LinearLayout {
                         Log.i(TAG, " sroll state idle ");
                     }
                     LinearLayoutManager llm = (LinearLayoutManager) recyclerView.getLayoutManager();
-                    if (llm.getItemCount() > mshowItemCount) {
-                        if (llm.getItemCount() == llm.findLastVisibleItemPosition() + 1) {
+                    int itemCount = llm.getItemCount();
+                    if (DEBUG) {
+                        Log.i(TAG, "itemcount " + itemCount + " showitemcout " + mshowItemCount + " lastvisiable " + llm.findLastVisibleItemPosition());
+                    }
+                    if (itemCount > mshowItemCount) {
+                        if (itemCount == llm.findLastVisibleItemPosition() + 1) {
                             recyclerView.scrollToPosition(0);
                         }
                         startScroll();

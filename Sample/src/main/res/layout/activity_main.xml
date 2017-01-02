@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e3e3e3"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,9 +14,38 @@
     <com.frankfancode.marqueeview.MarqueeView
         android:id="@+id/marqueeView"
         android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        app:scrollItemCount="1"
+        app:showItemCount="1"
+        app:standDuration="2000"
+        app:turningDuration="1000" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <com.frankfancode.marqueeview.MarqueeView
+        android:id="@+id/marqueeView1"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:background="@android:color/white"
         app:scrollItemCount="1"
         app:showItemCount="2"
         app:standDuration="1000"
         app:turningDuration="1000" />
-</RelativeLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <com.frankfancode.marqueeview.MarqueeView
+        android:id="@+id/marqueeView2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        app:scrollItemCount="2"
+        app:showItemCount="2"
+        app:standDuration="2000"
+        app:turningDuration="1000" />
+</LinearLayout>
